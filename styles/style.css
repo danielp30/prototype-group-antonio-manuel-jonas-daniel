@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Matters";
+  src: url(../assets/font/Matters.otf);
+}
+
+* {
+  font-family: "Matters" !important;
+}
+
+.custom-btn {
+  background-color: #2d3648 !important;
+  border: none !important;
+  padding: 0.8rem !important;
+}
+
+.filter-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+}
+
+.filter-text {
+  margin: 0;
+  color: #2d3648;
+  font-weight: bold;
+}
