@@ -67,12 +67,12 @@
                             <input type="date" class="form-control" placeholder="Bis" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Abteilung</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Abteilung">
+                            <label for="abteilung" class="form-label">Abteilung</label>
+                            <input type="text" class="form-control" id="abteilung" placeholder="Abteilung">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Ausbilder</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ausbilder">
+                            <label for="ausbilder" class="form-label">Ausbilder</label>
+                            <input type="text" class="form-control" id="ausbilder" placeholder="Ausbilder">
                         </div>
 
                             <div>
@@ -113,6 +113,7 @@
                                 <th scope="col" class="d-none d-sm-table-cell">Abteilung</th>
                                 <th scope="col" class="d-none d-sm-table-cell">Ausbilder</th>
                                 <th scope="col">Status</th>
+                                <th scope="col"> bearbeiten</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -120,19 +121,22 @@
                                 <th scope="row">07.08 - 14.08.2023</th>
                                 <td class="d-none d-sm-table-cell">Entwicklung</td>
                                 <td class="d-none d-sm-table-cell">Herr Meier</td>
-                                <td><span class="badge rounded-pill text-bg-success">Genehmigt</span></td>
+                                <td><span class="badge text-bg-success">Genehmigt</span></td>
+                                <td class="ps-4"><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.4884 0.792893C18.8789 1.18342 18.8789 1.81658 18.4884 2.20711L7.48836 13.2071C7.09783 13.5976 6.46467 13.5976 6.07414 13.2071L1.07414 8.20711C0.683619 7.81658 0.683619 7.18342 1.07414 6.79289C1.46467 6.40237 2.09783 6.40237 2.48836 6.79289L6.78125 11.0858L17.0741 0.792893C17.4647 0.402369 18.0978 0.402369 18.4884 0.792893Z" fill="#2D3648"/></svg></td>
                             </tr>
                             <tr>
                                 <th scope="row">15.08 - 22.08.2023</th>
                                 <td class="d-none d-sm-table-cell">Entwicklung</td>
                                 <td class="d-none d-sm-table-cell">Herr Meier</td>
-                                <td><span class="badge rounded-pill text-bg-warning">In Bearbeitung</span></td>
+                                <td><span class="badge text-bg-warning">In Bearbeitung</span></td>
+                                <td class="ps-4" data-bs-toggle="modal" data-bs-target="#neuerEintrag"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.52969 16.0195L16.6599 5.8893C17.8315 4.71772 17.8188 2.80556 16.6473 1.63399C15.4757 0.462414 13.5635 0.449746 12.392 1.62132L2.26171 11.7516C1.64607 12.3672 1.24671 13.1659 1.12358 14.0278L0.791629 16.3515C0.696785 17.0154 1.26585 17.5845 1.92976 17.4896L4.25343 17.1577C5.11533 17.0345 5.91405 16.6352 6.52969 16.0195Z" stroke="#404040" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td>
                             </tr>
                             <tr>
                                 <th scope="row">23.08 - 30.08.2023</th>
                                 <td class="d-none d-sm-table-cell">Entwicklung</td>
                                 <td class="d-none d-sm-table-cell">Herr Meier</td>
-                                <td><span class="badge rounded-pill text-bg-danger">Abgelehnt</span></td>
+                                <td><span class="badge text-bg-danger">Abgelehnt</span></td>
+                                <td class="ps-4" data-bs-toggle="modal" data-bs-target="#neuerEintrag"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.52969 16.0195L16.6599 5.8893C17.8315 4.71772 17.8188 2.80556 16.6473 1.63399C15.4757 0.462414 13.5635 0.449746 12.392 1.62132L2.26171 11.7516C1.64607 12.3672 1.24671 13.1659 1.12358 14.0278L0.791629 16.3515C0.696785 17.0154 1.26585 17.5845 1.92976 17.4896L4.25343 17.1577C5.11533 17.0345 5.91405 16.6352 6.52969 16.0195Z" stroke="#404040" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td>
                             </tr>
                             </tbody>
                         </table>
