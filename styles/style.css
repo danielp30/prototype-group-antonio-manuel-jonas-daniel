@@ -38,3 +38,8 @@
   #logout {
     text-align: center; !important;
   }
+
+  .nav-item {
+    font: menu;
+    font-size: larger;
+  }
