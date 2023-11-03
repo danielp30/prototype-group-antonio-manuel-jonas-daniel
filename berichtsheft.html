@@ -3,156 +3,132 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Skalierungseinstellungen -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IHK - Berichtsheft</title>
-    <link href="./styles/style.css" rel="Stylesheet">
-    <link rel="Stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="./styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
 </head>
 
 <body>
-<!-- Navigationsleiste -->
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <div class="col-4 col-lg-1">
-            <a class="navbar-brand" href="/"><img class="img-fluid" src="./assets/logo-ihk.png"></a>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-lg">
+        <a class="navbar-brand" href="/"><img class="w-50" src="./assets/logo-ihk.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Übersicht</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="berichtsheft.html">Berichtsheft</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="profil.html">Profil</a>
-                </li>
-            </ul>
-            <form class="d-flex justify-content-center" role="search">
-                <a class="btn btn-primary" href="logout.html">Log out</a>
-            </form>
+        <div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Übersicht</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="berichtsheft.html">Berichtsheft</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                </ul>
+                <div class="position-absolute end-0 me-3">
+                    <form class="d-flex" role="search">
+                        <button class="btn btn-primary" aria-current="page" href="/">Log out</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
-</div>
-<div class="container px-4 py-5" id="hanging-icons">
-    <h2 class="pb-2 border-bottom">Berichtsheft</h2>
+
+<div class="container px-4 py-5 pb-5" id="hanging-icons">
+    <h2 class="pb-2 ">Berichtsheft</h2>
     <div class="container py-5">
         <div class="row">
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12">
                 <div class="list-group">
                     <label class="list-group-item d-flex gap-3">
+                        <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked
+                               style="font-size: 1.375em;">
                         <span class="pt-1 form-checked-content">
-                            <strong>Noch zu bearbeiten:</strong>
-                             <small class="d-block text-body-secondary"></small>
+                                <strong>Woche 1</strong>
+                                <small class="d-block text-body-secondary">
+                                    06.11.2023 - 10.11.2023
+                                </small>
                         </span>
                     </label>
                     <label class="list-group-item d-flex gap-3">
-                        <input class="form-check-input flex-shrink-0" type="checkbox" value=""
-                               style="font-size: 1.375em;">
+                        <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked style="font-size: 1.375em;">
+                        <div class="d-flex flex-grow-1"><div>
                         <span class="pt-1 form-checked-content">
-                        <strong>Berichtsheft Woche 15</strong>
-                    <small class="d-block text-body-secondary">
-                        <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"></use></svg>Fällig am: 29.10.2023
-                    </small>
-                    </span>
+                            <strong>Woche 2</strong>
+                            <small class="d-block text-body-secondary">
+                                06.11.2023 - 10.11.2023
+                            </small>
+                        </span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end flex-grow-1">
+                                <span class="badge bg-danger mx-2">Abgelehnt</span>
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.2719 6.74139L18.5399 11.0094" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.52969 20.0195L19.6599 9.8893C20.8315 8.71772 20.8188 6.80556 19.6473 5.63399C18.4757 4.46242 16.5635 4.44975 15.392 5.62132L5.26171 15.7516C4.64607 16.3672 4.24671 17.1659 4.12358 18.0278L3.79163 20.3515C3.69679 21.0154 4.26585 21.5845 4.92976 21.4896L7.25343 21.1577C8.11533 21.0345 8.91405 20.6352 9.52969 20.0195Z" stroke="#404040" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            </div>
+                        </div>
                     </label>
+
                     <label class="list-group-item d-flex gap-3">
-                        <input class="form-check-input flex-shrink-0" type="checkbox" value=""
+                        <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked
                                style="font-size: 1.375em;">
                         <span class="pt-1 form-checked-content">
-        <strong>Berichtsheft Woche 16</strong>
-        <small class="d-block text-body-secondary">
-          <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"></use></svg>
-          Fällig am: 03.11.2023
-        </small>
-    </span>
-                    </label>
-                    <label class="list-group-item d-flex gap-3">
-                        <input class="form-check-input flex-shrink-0" type="checkbox" value=""
-                               style="font-size: 1.375em;">
-                        <span class="pt-1 form-checked-content">
-        <strong>Berichtsheft Woche 17</strong>
-        <small class="d-block text-body-secondary">
-         <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"></use></svg>
-         Fällig am: 10.11.2023
-        </small>
-      </span>
-                    </label>
-                    <span class="pt-1 form-checked-content">
-    </span>
-                    </label>
-                    <button type="button" class="btn btn-primary">Alle Anzeigen</button>
-                    </span>
+                                <strong>Woche 3</strong>
+                                <small class="d-block text-body-secondary">
+                                    13.11.2023 - 17.11.2023
+                                </small>
+                            </span>
                     </label>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12">
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                    <a href="#" class="list-group-item list-group-item-action d-flex flex-column gap-3 py-3"
                        aria-current="true">
-                        </label>
-                        <label class="list-group-item d-flex gap-3">
-
-                        <span class="pt-1 form-checked-content">
-        <strong>Berichtsheft Woche 17</strong>
-        <small class="d-block text-body-secondary">
-         <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"></use></svg>
-         Fällig am: 10.11.2023
-
-                            <div>
-                                <h6 class="mb-0">Third heading</h6>
-                                <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+                        <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                            <div class="pt-3">
+                                <h3 class="mb-0">Woche 1</h3>
+                                    <small class="mb-0 opacity-75">06.11.2023 - 10.11.2023</small>
                             </div>
-                            <small class="opacity-50 text-nowrap">1w</small>
-        </small>
-                        </span>
-                        </label>
-                        <label class="list-group-item d-flex gap-3">
-
-                        <span class="pt-1 form-checked-content">
-        <strong>Berichtsheft Woche 17</strong>
-        <small class="d-block text-body-secondary">
-         <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"></use></svg>
-         Fällig am: 10.11.2023
-
                             <div>
-                                <h6 class="mb-0">Third heading</h6>
-                                <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+                                <span class="badge  text-bg-success">Genehmigt</span>
                             </div>
-                            <small class="opacity-50 text-nowrap">1w</small>
-        </small>
-                        </span>
-                        </label>
-                        <label class="list-group-item d-flex gap-3">
-
-                        <span class="pt-1 form-checked-content">
-        <strong>Berichtsheft Woche 17</strong>
-        <small class="d-block text-body-secondary">
-         <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"></use></svg>
-         Fällig am: 10.11.2023
-
-                            <div>
-                                <h6 class="mb-0">Third heading</h6>
-                                <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
-                            </div>
-                            <small class="opacity-50 text-nowrap">1w</small>
-        </small>
-                        </span>
-                        </label>
+                        </div>
+                        <div>
+                            <h4>Betriebliche Tätigkeiten</h4>
+                            <ul>
+                                <li>Analyse und Dokumentation von Kundenanforderungen für das Projekt "XYZ".</li>
+                                <li>Programmierung von Webanwendungen unter Verwendung von Java und Spring Framework.</li>
+                                <li>Unterstützung bei der Fehlerbehebung und Optimierung in einem laufenden Softwareprojekt.</li>
+                                <li>    Teilnahme an wöchentlichen Team-Meetings zur Fortschrittsüberwachung und Aufgabenplanung.</li>
+                            </ul>
+                            <h4>Weiterbildung</h4>
+                            <ul>
+                                <li>Teilnahme an einem Weiterbildungskurs für Node.js, um die Fähigkeiten in der serverseitigen JavaScript-Entwicklung zu verbessern. Dies umfasste die Erstellung von Anwendungen, die auf der Node.js-Plattform basieren.</li>
+                            </ul>
+                            <h4>Schule</h4>
+                            <ul>
+                                <li>
+                                    Im Rahmen des schulischen Lehrplans lag der Fokus auf den Fächern Programmierung und Netzwerke. In der Programmierung wurden grundlegende und fortgeschrittene Kenntnisse in Java und C++ erworben. Im Netzwerke-Fach wurde die Konfiguration von Netzwerken, Netzwerksicherheit und die Verwaltung von Netzwerkressourcen behandelt.
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
                 </div>
             </div>
-
-            </a>
         </div>
     </div>
-        </div>
+</div>
 </body>
 </html>
