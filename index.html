@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <p>hi</p>
     <meta charset="UTF-8">
     <!-- Skalierungseinstellungen -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,8 +45,8 @@
         <div class="container py-5">
         <div class="col">
             <h1 class="pb-2">Hallo Azubi!</h1>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#neuerEintrag">Neuer Eintrag</button>
-            <div class="d-flex flex-row align-items-center mt-4">
+            <button type="button" class="btn btn-primary d-flex justifiy-content-end" data-bs-toggle="modal" data-bs-target="#neuerEintrag">Neuer Eintrag</button>
+            <div class="d-flex flex-row align-items-center my-4">
               <img class="filter-icon" src="./assets/icons/icon-filter.svg" alt="">
               <p class="filter-text">+ Filter</p>
             </div>
@@ -110,29 +109,30 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Zeitraum</th>
+                        <th scope="col">Abteilung</th>
+                        <th scope="col">Ausbilder</th>
+                        <th scope="col">Status</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <th scope="row">07.08 - 14.08.2023</th>
+                        <td>Entwicklung</td>
+                        <td>Herr Meier</td>
+                        <td><span class="badge rounded-pill text-bg-success">Genehmigt</span></td>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <th scope="row">15.08 - 22.08.2023</th>
+                        <td>Entwicklung</td>
+                        <td>Herr Meier</td>
+                        <td><span class="badge  rounded-pill text-bg-warning">In Bearbeitung</span></td>
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <th scope="row">23.08 - 30.08.2023</th>
+                        <td>Entwicklung</td>
+                        <td>Herr Meier</td>
+                        <td><span class="badge  rounded-pill text-bg-danger">Abgelehnt</span></td>
                     </tr>
                     </tbody>
                 </table>
