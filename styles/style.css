@@ -24,3 +24,17 @@
   color: #2d3648;
   font-weight: bold;
 }
+
+.nav-item a.nav-link:hover {
+  text-decoration: underline; !important;
+  color: #000;
+}
+
+
+  .navbar-nav {
+    text-align: center; !important;
+  }
+
+  #logout {
+    text-align: center; !important;
+  }

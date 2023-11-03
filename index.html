@@ -12,34 +12,32 @@
 </head>
 <body>
     <!-- Navigationsleiste -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-lg">
-      <a class="navbar-brand" href="/"><img class="w-50" src="./assets/logo-ihk.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Übersicht</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="berichtsheft.html">Berichtsheft</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="profil.html">Profil</a>
-            </li>
-          </ul>
-            <div class="position-absolute end-0 me-3">
-            <form class="d-flex" role="search">
-                <a class="btn btn-primary" href="logout.html">Log out</a>
-            </form>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <div class="col-4 col-lg-1">
+                <a class="navbar-brand" href="/"><img class="img-fluid" src="./assets/logo-ihk.png"></a>
             </div>
-      </div>
-      </div>
-    </div>
-  </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Übersicht</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="berichtsheft.html">Berichtsheft</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                </ul>
+                <form class="d-flex justify-content-center" role="search">
+                    <a class="btn btn-primary" href="logout.html">Log out</a>
+                </form>
+            </div>
+        </div>
+    </nav>
     <div class="container px-4 py-5" id="hanging-icons">
         <h2 class="pb-2 border-bottom">Übersicht</h2>
         <div class="container py-5">
@@ -76,7 +74,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Ausbilder</label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ausbilder">
                         </div>
-  
+
                             <div>
                                 <div class="row">
                                     <div class="col-1">
@@ -98,7 +96,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-link btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
                         <button type="button" class="btn btn-primary">Speichern</button>
                     </div>
                 </div>
@@ -106,36 +104,40 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">Zeitraum</th>
-                        <th scope="col">Abteilung</th>
-                        <th scope="col">Ausbilder</th>
-                        <th scope="col">Status</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">07.08 - 14.08.2023</th>
-                        <td>Entwicklung</td>
-                        <td>Herr Meier</td>
-                        <td><span class="badge rounded-pill text-bg-success">Genehmigt</span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">15.08 - 22.08.2023</th>
-                        <td>Entwicklung</td>
-                        <td>Herr Meier</td>
-                        <td><span class="badge  rounded-pill text-bg-warning">In Bearbeitung</span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">23.08 - 30.08.2023</th>
-                        <td>Entwicklung</td>
-                        <td>Herr Meier</td>
-                        <td><span class="badge  rounded-pill text-bg-danger">Abgelehnt</span></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Zeitraum</th>
+                                <th scope="col" class="d-none d-sm-table-cell">Abteilung</th>
+                                <th scope="col" class="d-none d-sm-table-cell">Ausbilder</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">07.08 - 14.08.2023</th>
+                                <td class="d-none d-sm-table-cell">Entwicklung</td>
+                                <td class="d-none d-sm-table-cell">Herr Meier</td>
+                                <td><span class="badge rounded-pill text-bg-success">Genehmigt</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">15.08 - 22.08.2023</th>
+                                <td class="d-none d-sm-table-cell">Entwicklung</td>
+                                <td class="d-none d-sm-table-cell">Herr Meier</td>
+                                <td><span class="badge rounded-pill text-bg-warning">In Bearbeitung</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">23.08 - 30.08.2023</th>
+                                <td class="d-none d-sm-table-cell">Entwicklung</td>
+                                <td class="d-none d-sm-table-cell">Herr Meier</td>
+                                <td><span class="badge rounded-pill text-bg-danger">Abgelehnt</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
             </div>
         </div>
@@ -143,6 +145,6 @@
 </div>
 </body>
 <footer>
-    
+
 </footer>
 </html>
