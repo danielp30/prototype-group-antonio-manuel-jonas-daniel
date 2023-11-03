@@ -12,41 +12,39 @@
 </head>
 <body>
     <!-- Navigationsleiste -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-lg">
-      <a class="navbar-brand" href="/"><img class="w-50" src="./assets/logo-ihk.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Übersicht</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="berichtsheft.html">Berichtsheft</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="profil.html">Profil</a>
-            </li>
-          </ul>
-            <div class="position-absolute end-0 me-3">
-            <form class="d-flex" role="search">
-                <a class="btn btn-primary" href="logout.html">Log out</a>
-            </form>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <div class="col-4 col-lg-1">
+                <a class="navbar-brand" href="/"><img class="img-fluid" src="./assets/logo-ihk.png"></a>
             </div>
-      </div>
-      </div>
-    </div>
-  </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Übersicht</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="berichtsheft.html">Berichtsheft</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                </ul>
+                <form class="d-flex justify-content-center" role="search">
+                    <a class="btn btn-primary" href="logout.html">Log out</a>
+                </form>
+            </div>
+        </div>
+    </nav>
     <div class="container px-4 py-5" id="hanging-icons">
         <h2 class="pb-2 border-bottom">Übersicht</h2>
         <div class="container py-5">
         <div class="col">
             <h1 class="pb-2">Hallo Azubi!</h1>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#neuerEintrag">Neuer Eintrag</button>
-            <div class="d-flex flex-row align-items-center mt-4">
+            <button type="button" class="btn btn-primary d-flex justifiy-content-end" data-bs-toggle="modal" data-bs-target="#neuerEintrag">Neuer Eintrag</button>
+            <div class="d-flex flex-row align-items-center my-4">
               <img class="filter-icon" src="./assets/icons/icon-filter.svg" alt="">
               <p class="filter-text">+ Filter</p>
             </div>
@@ -69,14 +67,14 @@
                             <input type="date" class="form-control" placeholder="Bis" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Abteilung</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Abteilung">
+                            <label for="abteilung" class="form-label">Abteilung</label>
+                            <input type="text" class="form-control" id="abteilung" placeholder="Abteilung">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Ausbilder</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ausbilder">
+                            <label for="ausbilder" class="form-label">Ausbilder</label>
+                            <input type="text" class="form-control" id="ausbilder" placeholder="Ausbilder">
                         </div>
-  
+
                             <div>
                                 <div class="row">
                                     <div class="col-1">
@@ -106,35 +104,44 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Zeitraum</th>
+                                <th scope="col" class="d-none d-sm-table-cell">Abteilung</th>
+                                <th scope="col" class="d-none d-sm-table-cell">Ausbilder</th>
+                                <th scope="col">Status</th>
+                                <th scope="col"> bearbeiten</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">07.08 - 14.08.2023</th>
+                                <td class="d-none d-sm-table-cell">Entwicklung</td>
+                                <td class="d-none d-sm-table-cell">Herr Meier</td>
+                                <td><span class="badge text-bg-success">Genehmigt</span></td>
+                                <td class="ps-4"><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.4884 0.792893C18.8789 1.18342 18.8789 1.81658 18.4884 2.20711L7.48836 13.2071C7.09783 13.5976 6.46467 13.5976 6.07414 13.2071L1.07414 8.20711C0.683619 7.81658 0.683619 7.18342 1.07414 6.79289C1.46467 6.40237 2.09783 6.40237 2.48836 6.79289L6.78125 11.0858L17.0741 0.792893C17.4647 0.402369 18.0978 0.402369 18.4884 0.792893Z" fill="#2D3648"/></svg></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">15.08 - 22.08.2023</th>
+                                <td class="d-none d-sm-table-cell">Entwicklung</td>
+                                <td class="d-none d-sm-table-cell">Herr Meier</td>
+                                <td><span class="badge text-bg-warning">In Bearbeitung</span></td>
+                                <td class="ps-4" data-bs-toggle="modal" data-bs-target="#neuerEintrag"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.52969 16.0195L16.6599 5.8893C17.8315 4.71772 17.8188 2.80556 16.6473 1.63399C15.4757 0.462414 13.5635 0.449746 12.392 1.62132L2.26171 11.7516C1.64607 12.3672 1.24671 13.1659 1.12358 14.0278L0.791629 16.3515C0.696785 17.0154 1.26585 17.5845 1.92976 17.4896L4.25343 17.1577C5.11533 17.0345 5.91405 16.6352 6.52969 16.0195Z" stroke="#404040" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">23.08 - 30.08.2023</th>
+                                <td class="d-none d-sm-table-cell">Entwicklung</td>
+                                <td class="d-none d-sm-table-cell">Herr Meier</td>
+                                <td><span class="badge text-bg-danger">Abgelehnt</span></td>
+                                <td class="ps-4" data-bs-toggle="modal" data-bs-target="#neuerEintrag"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.52969 16.0195L16.6599 5.8893C17.8315 4.71772 17.8188 2.80556 16.6473 1.63399C15.4757 0.462414 13.5635 0.449746 12.392 1.62132L2.26171 11.7516C1.64607 12.3672 1.24671 13.1659 1.12358 14.0278L0.791629 16.3515C0.696785 17.0154 1.26585 17.5845 1.92976 17.4896L4.25343 17.1577C5.11533 17.0345 5.91405 16.6352 6.52969 16.0195Z" stroke="#404040" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
             </div>
         </div>
@@ -142,6 +149,6 @@
 </div>
 </body>
 <footer>
-    
+
 </footer>
 </html>
